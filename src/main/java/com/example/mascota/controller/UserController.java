@@ -93,7 +93,7 @@ public class UserController {
     public ResponseEntity<HttpStatus> deleteUSer(@PathVariable("id") String id) {
         try {
             userRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
